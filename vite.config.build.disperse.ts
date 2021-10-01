@@ -6,7 +6,7 @@ import configPkg from './src/config.json';
 
 const banner = `/*!
 * ${config.name} v${config.version} ${new Date()}
-* (c) 2021 @jdf2e.
+* (c) 2021 @qqjay2017.
 * Released under the MIT License.
 */`;
 
@@ -16,9 +16,7 @@ configPkg.nav.map((item) => {
   item.packages.forEach((element) => {
     let { name, show, type, exportEmpty } = element;
     if (show || exportEmpty) {
-      input[name] = `./src/packages/__VUE/${name.toLowerCase()}/index${
-        type === 'methods' ? '.ts' : '.vue'
-      }`;
+      input[name] = `./src/packages/__VUE/${name.toLowerCase()}/index${type === 'methods' ? '.ts' : '.vue'}`;
     }
   });
 });

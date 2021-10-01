@@ -3,7 +3,7 @@ import config from './package.json';
 
 const banner = `/*!
 * ${config.name} v${config.version} ${new Date()}
-* (c) 2021 @jdf2e.
+* (c) 2021 @qqjay2017.
 * Released under the MIT License.
 */`;
 

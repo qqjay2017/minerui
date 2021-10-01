@@ -16,7 +16,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="user-link" target="_blank" href="https://github.com/jdf2e/minerui"></a>
+            <a class="user-link" target="_blank" href="https://github.com/qqjay2017/minerui"></a>
             <a class="user-link gitee" target="_blank" href="https://gitee.com/jd-platform-opensource/minerui"></a>
           </li>
         </ul>

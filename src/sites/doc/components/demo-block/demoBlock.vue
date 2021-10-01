@@ -3,7 +3,7 @@
     <slot name="highlight"></slot>
     <slot></slot>
     <p class="online-part">
-      <a href="//gitpod.io/#https://github.com/jdf2e/minerui.git" target="_blank" class="online-btn">在线运行</a>
+      <a href="//gitpod.io/#https://github.com/qqjay2017/minerui.git" target="_blank" class="online-btn">在线运行</a>
     </p>
   </div>
 </template>

@@ -5,7 +5,7 @@ import config from './package.json';
 
 const banner = `/*!
 * ${config.name} v${config.version} ${new Date()}
-* (c) 2021 @jdf2e.
+* (c) 2021 @qqjay2017.
 * Released under the MIT License.
 */`;
 
@@ -24,13 +24,7 @@ export default defineConfig({
     postcss: {
       plugins: [
         require('autoprefixer')({
-          overrideBrowserslist: [
-            '> 0.5%',
-            'last 2 versions',
-            'ie > 11',
-            'iOS >= 10',
-            'Android >= 5'
-          ]
+          overrideBrowserslist: ['> 0.5%', 'last 2 versions', 'ie > 11', 'iOS >= 10', 'Android >= 5']
         })
       ]
     }
