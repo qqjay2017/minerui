@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`prop disabled 1`] = `
+"<view class=\\"miner-checkbox \\"><i class=\\"minerui-iconfont miner-icon miner-icon-checked miner-checkbox__icon--disable\\" style=\\"font-size: 18px; width: 18px; height: 18px;\\" src=\\"\\"></i>
+  <view class=\\"miner-checkbox__label miner-checkbox__label--disabled\\"></view>
+</view>"
+`;
+
+exports[`prop iconName iconActiveName 1`] = `
+"<view class=\\"miner-checkbox \\"><i class=\\"minerui-iconfont miner-icon miner-icon-check-normal miner-checkbox__icon--unchecked\\" style=\\"font-size: 18px; width: 18px; height: 18px;\\" src=\\"\\"></i>
+  <view class=\\"miner-checkbox__label \\"></view>
+</view>"
+`;
+
+exports[`prop iconSize 1`] = `
+"<view class=\\"miner-checkbox \\"><i class=\\"minerui-iconfont miner-icon miner-icon-checked miner-checkbox__icon\\" style=\\"font-size: 20px; width: 20px; height: 20px;\\" src=\\"\\"></i>
+  <view class=\\"miner-checkbox__label \\"></view>
+</view>"
+`;
+
+exports[`prop label 1`] = `
+"<view class=\\"miner-checkbox \\"><i class=\\"minerui-iconfont miner-icon miner-icon-check-normal miner-checkbox__icon--unchecked\\" style=\\"font-size: 18px; width: 18px; height: 18px;\\" src=\\"\\"></i>
+  <view class=\\"miner-checkbox__label \\"></view>
+</view>"
+`;

@@ -1,0 +1,29 @@
+.miner-cell-group {
+  display: block;
+  &__title {
+    display: inherit;
+    padding: $cell-group-title-padding;
+    color: $cell-group-title-color;
+    font-size: $cell-group-title-font-size;
+    line-height: $cell-group-title-line-height;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  &__warp {
+    display: inherit;
+    border-radius: $cell-border-radius;
+    overflow: hidden;
+    background-color: $cell-group-background-color;
+    margin: 10px 0;
+    .miner-cell {
+      margin: 0;
+      box-shadow: none;
+      border-radius: 0;
+    }
+  }
+  .miner-cell {
+    &::after {
+      border-bottom: 2px solid #f5f6f7;
+    }
+  }
+}
