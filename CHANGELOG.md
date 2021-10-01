@@ -12,4 +12,3 @@ All notable changes to this project will be documented in this file. See [standa
 * 组件整理 ([7cb3ae3](https://github.com/qqjay2017/minerui/commit/7cb3ae309413c7ae1c800c3d9067265b9fdf5c39))
 
 
-## v3.0.0

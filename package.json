@@ -36,8 +36,6 @@
     "checked": "npm run generate:file && tsc",
     "dev": "npm run checked && vite --force",
     "build:site": "npm run checked && vite build",
-    "build:gh-pages": "npm run checked && vite build --base=/minerui/",
-    "build:site:oss": "npm run checked && vite build --base=/minerui/3x/",
     "build": "npm run checked && vite build --config vite.config.build.ts && vite build --config vite.config.build.disperse.ts && npm run generate:types && npm run generate:themes && vite build --config vite.config.build.css.ts",
     "serve": "vite preview",
     "upload": "yarn build:site:oss && node ./script/upload.js",
