@@ -2,62 +2,22 @@
   <!-- <div class="doc-header" :style="{ background: themeColor === 'red' ? headerBg : themeColor }" :class="`doc-header-${data.theme}`"> -->
   <div class="doc-header" :class="themeName()">
     <div class="header-logo">
-      <a class="logo-link" href="#" @click="toHome"></a>
       <span class="logo-border"></span>
-      <span class="version">v{{ version }}</span>
+      <span class="version" @click="toHome">v{{ version }}</span>
     </div>
     <div class="header-nav">
       <Search />
       <div class="nav-box">
         <ul class="nav-list">
-          <li
-            class="nav-item"
-            v-for="item in header"
-            :key="item.name"
-            :class="{ active: isActive(item.name) }"
-          >
+          <li class="nav-item" v-for="item in header" :key="item.name" :class="{ active: isActive(item.name) }">
             <a :href="item.path">
               {{ item.cName }}
             </a>
           </li>
+
           <li class="nav-item">
-            <div
-              @focus="handleFocus"
-              @focusout="handleFocusOut"
-              tabindex="0"
-              class="header-select-box"
-              @click.stop="data.isShowSelect = !data.isShowSelect"
-              :class="[data.isShowSelect == true ? 'select-up' : 'select-down']"
-            >
-              <div class="header-select-hd"
-                >{{ data.verson }}<i class=""></i
-              ></div>
-              <transition name="fade">
-                <div class="header-select-bd" v-show="data.isShowSelect">
-                  <div
-                    class="header-select-item"
-                    v-for="(item, index) in versions"
-                    :key="index"
-                    @click.stop="checkTheme(item)"
-                    :class="{ active: data.activeIndex === index }"
-                  >
-                    {{ item.name }}
-                  </div>
-                </div>
-              </transition>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a
-              class="user-link"
-              target="_blank"
-              href="https://github.com/jdf2e/minerui"
-            ></a>
-            <a
-              class="user-link gitee"
-              target="_blank"
-              href="https://gitee.com/jd-platform-opensource/minerui"
-            ></a>
+            <a class="user-link" target="_blank" href="https://github.com/jdf2e/minerui"></a>
+            <a class="user-link gitee" target="_blank" href="https://gitee.com/jd-platform-opensource/minerui"></a>
           </li>
         </ul>
       </div>
@@ -107,9 +67,7 @@ export default defineComponent({
           if (value.indexOf('-taro') > -1) {
             value = value.split('-taro')[0];
           }
-          return (
-            packages.findIndex((item) => item.name.toLowerCase() === value) > -1
-          );
+          return packages.findIndex((item) => item.name.toLowerCase() === value) > -1;
         } else {
           return value === lName || lName.includes(value);
         }
@@ -165,7 +123,7 @@ export default defineComponent({
   &-logo {
     position: relative;
     display: inline-block;
-    width: 240px;
+    width: 140px;
     height: 64px;
     .logo-link {
       width: 120px;
@@ -191,12 +149,12 @@ export default defineComponent({
   }
   &-nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     float: right;
-    width: calc(100% - 240px);
+    width: calc(100% - 140px);
     min-width: 900px;
-    padding: 0 40px;
+    padding: 0 20px;
     .nav-box {
       margin-right: 140px;
       .nav-list {
@@ -204,7 +162,7 @@ export default defineComponent({
         display: flex;
         list-style: none;
         align-items: center;
-        justify-content: space-around;
+        justify-content: flex-end;
       }
       .nav-item {
         position: relative;
@@ -304,8 +262,7 @@ export default defineComponent({
     .header {
       &-logo {
         .logo-link {
-          background: url('../../assets/images/logo-header-white.png') no-repeat
-            center/100%;
+          background: url('../../assets/images/logo-header-white.png') no-repeat center/100%;
         }
         .logo-border {
           background: $theme-red-border;
@@ -383,8 +340,7 @@ export default defineComponent({
     .header {
       &-logo {
         .logo-link {
-          background: url('../../assets/images/logo-header-red.png') no-repeat
-            center/100%;
+          background: url('../../assets/images/logo-header-red.png') no-repeat center/100%;
         }
         .logo-border {
           background: $theme-white-border;
@@ -462,8 +418,7 @@ export default defineComponent({
     .header {
       &-logo {
         .logo-link {
-          background: url('../../assets/images/logo-header-red.png') no-repeat
-            center/100%;
+          background: url('../../assets/images/logo-header-red.png') no-repeat center/100%;
         }
         .logo-border {
           background: $theme-black-border;

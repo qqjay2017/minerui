@@ -1,10 +1,9 @@
 <template>
   <div class="index">
     <div class="index-header">
-      <img src="../../assets/images/logo-red.png" alt="" srcset="" />
       <div class="info">
         <h1>MinerUI</h1>
-        <p>京东风格的轻量级移动端 Vue 组件库</p>
+        <p>Vue3 组件库</p>
       </div>
     </div>
     <div class="index-components">
@@ -14,9 +13,7 @@
           <template v-for="_package in _nav.packages" :key="_package">
             <li v-if="_package.show">
               <router-link :to="_package.name.toLowerCase()"
-                >{{ _package.name }}&nbsp;&nbsp;{{
-                  _package.cName
-                }}</router-link
+                >{{ _package.name }}&nbsp;&nbsp;{{ _package.cName }}</router-link
               >
               <miner-icon size="14px" color="#979797" name="right"></miner-icon>
             </li>

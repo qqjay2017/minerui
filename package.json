@@ -1,7 +1,7 @@
 {
   "name": "@minerui/minerui",
-  "version": "3.1.7",
-  "description": "京东风格的轻量级移动端 Vue2、Vue3 组件库（支持小程序开发）",
+  "version": "0.0.1",
+  "description": "Vue3 组件库",
   "main": "dist/minerui.umd.js",
   "module": "dist/minerui.es.js",
   "style": "dist/style.css",
@@ -34,18 +34,18 @@
   ],
   "scripts": {
     "checked": "npm run generate:file && tsc",
-    "dev": "npm run checked && vite --open --force",
+    "dev": "npm run checked && vite --force",
     "build:site": "npm run checked && vite build",
     "build:gh-pages": "npm run checked && vite build --base=/minerui/",
     "build:site:oss": "npm run checked && vite build --base=/minerui/3x/",
     "build": "npm run checked && vite build --config vite.config.build.ts && vite build --config vite.config.build.disperse.ts && npm run generate:types && npm run generate:themes && vite build --config vite.config.build.css.ts",
     "serve": "vite preview",
-    "upload": "yarn build:site:oss && node ./jd/upload.js",
-    "add": "node jd/createComponentMode.js",
+    "upload": "yarn build:site:oss && node ./script/upload.js",
+    "add": "node script/createComponentMode.js",
     "publish:next": "npm publish --tag=next",
-    "generate:file": "node jd/generate-minerui.js",
-    "generate:types": "node jd/generate-types.js",
-    "generate:themes": "node jd/generate-themes.js",
+    "generate:file": "node script/generate-minerui.js",
+    "generate:types": "node script/generate-types.js",
+    "generate:themes": "node script/generate-themes.js",
     "prepare": "husky install",
     "test": "jest",
     "release": "standard-version -a",
@@ -53,7 +53,7 @@
   },
   "standard-version": {
     "scripts": {
-      "postchangelog": "node ./jd/updateChangelog.js"
+      "postchangelog": "node ./script/updateChangelog.js"
     }
   },
   "dependencies": {
@@ -120,6 +120,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jdf2e/minerui.git"
+    "url": "https://github.com/qqjay2017/minerui.git"
   }
 }

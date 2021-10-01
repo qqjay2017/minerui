@@ -1,14 +1,12 @@
 <template>
-  <div class="v3-banner" :class="{ active: false }"
-    >MinerUI 现已发布 Vue3.x 版本，带来更强大的功能和出色的体验</div
-  >
+  <div class="v3-banner" :class="{ active: false }">MinerUI 现已发布 Vue3.x 版本，带来更强大的功能和出色的体验</div>
   <doc-header></doc-header>
   <div class="doc-content" :class="themeName()">
     <div class="doc-content-index">
       <div class="content-left">
         <div class="content-title"> MinerUI </div>
         <div class="content-smile"> </div>
-        <div class="content-subTitle">京东风格的轻量级移动端 Vue 组件库</div>
+        <div class="content-subTitle">Vue3 组件库</div>
         <div class="content-button">
           <div class="leftButton" @click="toIntro">
             <div class="leftButtonText">开始使用</div>
@@ -97,9 +95,7 @@
               <img src="./../../assets/images/cat-title.png" alt="" />
             </div>
             <p class="cat-content-right-desc">基于 MinerUI 的大促组件</p>
-            <div class="cat-content-right-godetail" @click="toDetail"
-              >查看详情</div
-            >
+            <div class="cat-content-right-godetail" @click="toDetail">查看详情</div>
           </div>
         </div>
         <div class="marketing-content">
@@ -111,17 +107,9 @@
               <img src="./../../assets/images/marketing-title.png" alt="" />
             </div>
             <p class="marketing-content-right-desc">基于 MinerUI 的营销组件</p>
-            <div class="marketing-content-right-godetail" @click="goAwait"
-              >敬请期待</div
-            >
+            <div class="marketing-content-right-godetail" @click="goAwait">敬请期待</div>
           </div>
-          <div
-            class="marketing-content-mask"
-            v-if="showAwait"
-            @click="hideAwait"
-          >
-            正在建设中，敬请期待~
-          </div>
+          <div class="marketing-content-mask" v-if="showAwait" @click="hideAwait"> 正在建设中，敬请期待~ </div>
         </div>
       </div>
     </div>
@@ -132,10 +120,7 @@
       </div>
       <div class="doc-content-cases-content">
         <div class="doc-content-cases-content__main">
-          <div
-            class="doc-content-cases-content__main-lefticon"
-            @click="onLeft"
-          ></div>
+          <div class="doc-content-cases-content__main-lefticon" @click="onLeft"></div>
           <div class="doc-content-cases-content__main-iconinfo">
             <h4>{{ currentCaseItem.product_name }}</h4>
             <p>{{ currentCaseItem.product_info }}</p>
@@ -149,21 +134,11 @@
           >
             <img src="../../assets/images/iphone-cases.png" alt="" srcset="" />
           </div>
-          <div
-            class="doc-content-cases-content__main-righticon"
-            @click="onRight"
-          ></div>
+          <div class="doc-content-cases-content__main-righticon" @click="onRight"></div>
         </div>
         <div class="doc-content-cases-content__list">
-          <div
-            class="swiper-wrapper"
-            :class="[themeNameValue() == 'black' ? 'noShadow' : '']"
-          >
-            <div
-              class="swiper-slide"
-              v-for="(item, index) in casesImages"
-              :key="index"
-            >
+          <div class="swiper-wrapper" :class="[themeNameValue() == 'black' ? 'noShadow' : '']">
+            <div class="swiper-slide" v-for="(item, index) in casesImages" :key="index">
               <img :src="item.cover_image" />
             </div>
           </div>
@@ -176,12 +151,7 @@
         <a class="sub-more" href="#/resource">More</a>
       </div>
       <ul class="more-list">
-        <li
-          class="more-item"
-          v-for="item in articleList.slice(0, 4)"
-          :key="item.id"
-          @click="toLink(item.id)"
-        >
+        <li class="more-item" v-for="item in articleList.slice(0, 4)" :key="item.id" @click="toLink(item.id)">
           <img :src="item.cover_image" />
           <p class="more-title" v-hover>{{ item.title }}</p>
         </li>
@@ -191,14 +161,7 @@
   <doc-footer></doc-footer>
 </template>
 <script lang="ts">
-import {
-  defineComponent,
-  onMounted,
-  reactive,
-  toRefs,
-  computed,
-  ref
-} from 'vue';
+import { defineComponent, onMounted, reactive, toRefs, computed, ref } from 'vue';
 import Header from '@/sites/doc/components/Header.vue';
 import Footer from '@/sites/doc/components/Footer.vue';
 import router from '../router';
@@ -258,13 +221,9 @@ export default defineComponent({
               on: {
                 slideChange: function () {
                   let realIndex = (this as any).realIndex;
-                  data.currentCaseIndex =
-                    realIndex === 0
-                      ? data.casesImages.length - 1
-                      : realIndex - 1;
+                  data.currentCaseIndex = realIndex === 0 ? data.casesImages.length - 1 : realIndex - 1;
                   setTimeout(() => {
-                    data.currentCaseItem =
-                      data.casesImages[data.currentCaseIndex];
+                    data.currentCaseItem = data.casesImages[data.currentCaseIndex];
                   }, 230);
                 }
               }
@@ -891,8 +850,7 @@ export default defineComponent({
       .right-img {
         width: 436px;
         height: 213px;
-        background: url('../../assets/images/img-taro-right-white.png')
-          no-repeat;
+        background: url('../../assets/images/img-taro-right-white.png') no-repeat;
         background-size: cover;
         margin-bottom: 58px;
       }

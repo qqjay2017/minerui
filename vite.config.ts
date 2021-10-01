@@ -8,12 +8,12 @@ const hljs = require('highlight.js'); // https://highlightjs.org/
 const resolve = path.resolve;
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/3x/',
+  base: '/',
   server: {
     port: 2021,
     proxy: {
       '/devServer': {
-        target: 'https://minerui.jd.com',
+        target: 'https://nutui.jd.com',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/devServer/, '')
       }
@@ -63,7 +63,7 @@ export default defineConfig({
   ],
   build: {
     target: 'es2015',
-    outDir: './dist/3x/',
+    outDir: './dist/',
     assetsDir: config.version,
     cssCodeSplit: true,
     rollupOptions: {
