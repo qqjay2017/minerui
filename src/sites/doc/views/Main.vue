@@ -1,5 +1,4 @@
 <template>
-  <div class="v3-banner" :class="{ active: false }">MinerUI 现已发布 Vue3.x 版本，带来更强大的功能和出色的体验</div>
   <doc-header></doc-header>
   <div class="doc-content" :class="themeName()">
     <div class="doc-content-index">
@@ -11,14 +10,7 @@
           <div class="leftButton" @click="toIntro">
             <div class="leftButtonText">开始使用</div>
           </div>
-          <div class="rightButton">
-            <div class="rightButtonText">扫码体验</div>
 
-            <div class="qrcodepart">
-              <div class="qrcode-text"> 请使用手机扫码体验 </div>
-              <div class="qrcode"> </div>
-            </div>
-          </div>
           <iframe
             style="margin-left: 20px"
             src="https://ghbtns.com/github-btn.html?user=jdf2e&repo=minerui&type=star&count=true&size=large"
@@ -31,134 +23,7 @@
         </div>
       </div>
     </div>
-    <div class="doc-content-features">
-      <div class="doc-content-hd">
-        <h4 class="doc-content-title">平台特色</h4>
-      </div>
-      <ul class="features-list">
-        <li class="features-item">
-          <img src="../../assets/images/img-home-features1.png" />
-          <p class="features-title">京东风格</p>
-          <p class="features-desc">遵循京东 App 10.0 设计规范</p>
-        </li>
-        <li class="features-item">
-          <img src="../../assets/images/img-home-features5.png" />
-          <p class="features-title">适配多端</p>
-          <p class="features-desc a-l">基于 Taro 轻松开发多端小程序</p>
-        </li>
-        <li class="features-item">
-          <img src="../../assets/images/img-home-features2.png" />
-          <p class="features-title">组件丰富</p>
-          <p class="features-desc a-l">提供 70+ 组件，覆盖绝大多数业务场景</p>
-        </li>
-        <li class="features-item">
-          <img src="../../assets/images/img-home-features3.png" />
-          <p class="features-title">前沿技术</p>
-          <p class="features-desc">vue3 vite2.x typescript</p>
-        </li>
-        <li class="features-item">
-          <img src="../../assets/images/img-home-features4.png" />
-          <p class="features-title">贴心通道</p>
-          <p class="features-desc">社区维护 高效服务<br />技术支持 经验沉淀</p>
-        </li>
-      </ul>
-    </div>
-    <!-- taro楼层 -->
-    <div class="doc-content-taro">
-      <div class="doc-content-hd">
-        <h4 class="doc-content-title">一处代码 多端运行</h4>
-      </div>
-      <div class="taro-content">
-        <div class="taro-left"> </div>
-        <div class="taro-right">
-          <div class="right-img"></div>
-          <p class="taro-desc">
-            基于 Taro 对 MinerUI 每一个组件进行深度适配<br />
-            支持开发多端小程序
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- minerui-cat / minerui-营销 -->
-    <div class="doc-content-catmarketing">
-      <div class="doc-content-hd">
-        <h4 class="doc-content-title">业务组件</h4>
-      </div>
-      <div class="doc-content-catmarketing-content">
-        <div class="cat-content">
-          <div class="cat-content-left">
-            <img src="./../../assets/images/cat-back.png" alt="" />
-          </div>
-          <div class="cat-content-right">
-            <div class="cat-content-right-title">
-              <img src="./../../assets/images/cat-title.png" alt="" />
-            </div>
-            <p class="cat-content-right-desc">基于 MinerUI 的大促组件</p>
-            <div class="cat-content-right-godetail" @click="toDetail">查看详情</div>
-          </div>
-        </div>
-        <div class="marketing-content">
-          <div class="marketing-content-left">
-            <img src="./../../assets/images/marketing-back.png" alt="" />
-          </div>
-          <div class="marketing-content-right">
-            <div class="marketing-content-right-title">
-              <img src="./../../assets/images/marketing-title.png" alt="" />
-            </div>
-            <p class="marketing-content-right-desc">基于 MinerUI 的营销组件</p>
-            <div class="marketing-content-right-godetail" @click="goAwait">敬请期待</div>
-          </div>
-          <div class="marketing-content-mask" v-if="showAwait" @click="hideAwait"> 正在建设中，敬请期待~ </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="doc-content-cases" v-if="casesImages.length">
-      <div class="doc-content-hd">
-        <h4 class="doc-content-title">应用案例</h4>
-      </div>
-      <div class="doc-content-cases-content">
-        <div class="doc-content-cases-content__main">
-          <div class="doc-content-cases-content__main-lefticon" @click="onLeft"></div>
-          <div class="doc-content-cases-content__main-iconinfo">
-            <h4>{{ currentCaseItem.product_name }}</h4>
-            <p>{{ currentCaseItem.product_info }}</p>
-            <img :src="currentCaseItem.logo" />
-          </div>
-          <div
-            class="doc-content-cases-content__main-iphone"
-            :style="{
-              backgroundImage: 'url(' + currentCaseItem.cover_image + ')'
-            }"
-          >
-            <img src="../../assets/images/iphone-cases.png" alt="" srcset="" />
-          </div>
-          <div class="doc-content-cases-content__main-righticon" @click="onRight"></div>
-        </div>
-        <div class="doc-content-cases-content__list">
-          <div class="swiper-wrapper" :class="[themeNameValue() == 'black' ? 'noShadow' : '']">
-            <div class="swiper-slide" v-for="(item, index) in casesImages" :key="index">
-              <img :src="item.cover_image" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="doc-content-more" v-if="articleList.length">
-      <div class="doc-content-hd">
-        <h4 class="doc-content-title">学习资源</h4>
-        <a class="sub-more" href="#/resource">More</a>
-      </div>
-      <ul class="more-list">
-        <li class="more-item" v-for="item in articleList.slice(0, 4)" :key="item.id" @click="toLink(item.id)">
-          <img :src="item.cover_image" />
-          <p class="more-title" v-hover>{{ item.title }}</p>
-        </li>
-      </ul>
-    </div>
   </div>
-  <doc-footer></doc-footer>
 </template>
 <script lang="ts">
 import { defineComponent, onMounted, reactive, toRefs, computed, ref } from 'vue';
@@ -293,7 +158,7 @@ export default defineComponent({
   z-index: 1;
   text-align: center;
   padding: 10px 60px;
-  color: #fff;
+  color: #f5f6f8;
   background: linear-gradient(
     135deg,
     rgba(242, 20, 12, 1) 0%,
@@ -313,8 +178,6 @@ export default defineComponent({
 }
 .doc-content-index {
   .content-left {
-    background: url(https://storage.360buyimg.com/imgtools/a423faab46-8b142e80-8bb1-11eb-853a-6fded8704e77.png)
-      no-repeat;
     background-size: 1126px 568px;
     background-position-x: right;
     background-position-y: 150px;
@@ -395,7 +258,7 @@ export default defineComponent({
         margin-left: 50px;
         width: 453px;
         height: 386px;
-        background: url('../../assets/images/img-taro-left.png') no-repeat;
+
         background-size: cover;
       }
       .taro-right {
@@ -403,7 +266,7 @@ export default defineComponent({
         .right-img {
           width: 436px;
           height: 213px;
-          background: url('../../assets/images/img-taro-right.png') no-repeat;
+
           background-size: cover;
           margin-bottom: 58px;
         }
@@ -527,7 +390,7 @@ export default defineComponent({
         left: 0px;
         height: 100%;
         width: 100%;
-        background: rgba(0, 0, 0, 0.52);
+        background: #f5f6f8;
         border-radius: 4px 4px 4px 0 4px;
         text-align: center;
         line-height: 270px;
@@ -686,8 +549,8 @@ export default defineComponent({
 .doc-content-index {
   display: flex;
   height: 926px;
-  margin-bottom: 70px;
-  background-color: #070505;
+
+  background-color: #f5f6f8;
   min-width: 1200px;
   .content-left {
     padding: 15% 0 0 8.8%;
@@ -697,7 +560,7 @@ export default defineComponent({
     .content-title {
       // line-height: 36px;
       font-size: 42px;
-      color: rgba(255, 255, 255, 1);
+      color: #4f4f4f;
     }
     .content-smile {
       margin-top: 10px;
@@ -710,7 +573,7 @@ export default defineComponent({
     .content-subTitle {
       margin-top: 12px;
       font-size: 20px;
-      color: rgba(255, 255, 255, 1);
+      color: #4f4f4f;
     }
     .content-button {
       position: relative;
@@ -724,18 +587,13 @@ export default defineComponent({
         .leftButtonText {
           align-self: center;
           margin: auto;
+
           font-size: 14px;
           color: rgba(255, 255, 255, 1);
         }
         width: 150px;
         height: 40px;
-        background: linear-gradient(
-          135deg,
-          rgba(250, 25, 44, 1) 0%,
-          rgba(250, 39, 40, 1) 45%,
-          rgba(250, 56, 31, 1) 83%,
-          rgba(250, 63, 25, 1) 100%
-        );
+        background: linear-gradient(135deg, #f4c543 0%, #ec9b37 100%);
         border-radius: 29px;
         cursor: pointer;
       }
@@ -804,7 +662,7 @@ export default defineComponent({
   }
   .doc-content-more {
     .more-title {
-      color: #fff;
+      color: #f5f6f8;
     }
   }
   .doc-content-cases-content__main {

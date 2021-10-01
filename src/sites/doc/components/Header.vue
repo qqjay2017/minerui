@@ -41,7 +41,7 @@ export default defineComponent({
       packages.push(...item.packages);
     });
     const data = reactive({
-      theme: 'black',
+      theme: 'white',
       // headerBg: 'url(' + require('../../assets/images/header-bg.png') + ')',
       verson: '3.x',
       navIndex: 0,
@@ -188,7 +188,6 @@ export default defineComponent({
             bottom: 3px;
             left: 50%;
             margin-left: -17.5px;
-            background: url('../../assets/images/item-active.png');
           }
         }
         &:last-of-type {
@@ -411,8 +410,8 @@ export default defineComponent({
     }
   }
   // 黑色
-  &-black {
-    background: $black;
+  &-white {
+    background: $white;
     color: $theme-black-word;
     border-bottom: 1px solid $theme-black-box-border;
     .header {

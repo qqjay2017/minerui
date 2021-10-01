@@ -1,23 +1,13 @@
 # 快速上手
 
-## 预览
-
-
-> 扫描下方二维码体验，体验 Vue3 组件库示例
-
-<img src="https://img12.360buyimg.com/imagetools/jfs/t1/162421/39/13392/9425/6052ea60E592310a9/264bdff23ef5fe95.png" width="200" alt="MinerUI">
 
 ## NPM 安装
 
 ```bash
-# Vue2 项目 需要参考 2.x 文档 https://minerui.jd.com/2x
-npm i @minerui/minerui
 
 # Vue3 项目
-npm i @minerui/minerui@next
+npm i @minerui/minerui@last
 
-# taro 小程序项目
-npm i @minerui/minerui-taro
 ```
 
 ### NPM 使用示例
