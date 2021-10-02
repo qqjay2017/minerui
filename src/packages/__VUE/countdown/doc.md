@@ -10,8 +10,7 @@
 import { createApp } from 'vue';
 // vue
 import { CountDown } from '@minerui/minerui';
-// taro
-import { CountDown } from '@minerui/minerui-taro';
+
 
 const app = createApp();
 app.use(CountDown);

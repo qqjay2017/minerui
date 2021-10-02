@@ -9,8 +9,7 @@
 import { createApp } from 'vue';
 //vue
 import { ShortPassword,Popup } from '@minerui/minerui';
-//taro
-import { ShortPassword,Popup } from '@minerui/minerui-taro';
+
 
 const app = createApp();
 app.use(ShortPassword);

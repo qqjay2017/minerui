@@ -63,7 +63,7 @@ taro init myApp
 ```javascript
 import { createApp } from "vue";
 import App from "./App.vue";
-import MinerUI from "@minerui/minerui-taro";
+import MinerUI from "@minerui/minerui";
 import "@minerui/minerui-taro/dist/style.css";
 createApp(App).use(MinerUI);
 ```

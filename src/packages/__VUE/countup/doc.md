@@ -11,8 +11,7 @@
 import { createApp } from 'vue';
 // vue
 import { CountUp } from '@minerui/minerui';
-// taro
-import { CountUp } from '@minerui/minerui-taro';
+
 
 const app = createApp();
 app.use(CountUp);

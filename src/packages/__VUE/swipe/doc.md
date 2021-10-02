@@ -10,8 +10,7 @@
 import { createApp } from 'vue';
 //vue
 import { Swipe } from '@minerui/minerui';
-//taro
-import { Swipe } from '@minerui/minerui-taro';
+
 
 const app = createApp();
 app.use(Swipe);

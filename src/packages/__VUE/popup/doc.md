@@ -10,8 +10,7 @@
 import { createApp } from 'vue';
 //vue
 import { Popup } from '@minerui/minerui';
-//taro
-import { Popup } from '@minerui/minerui-taro';
+
 
 const app = createApp();
 app.use(Popup);

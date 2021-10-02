@@ -12,8 +12,7 @@
 import { createApp } from 'vue';
 // vue
 import { Navbar,Icon } from '@minerui/minerui';
-// taro
-import { Navbar,Icon } from '@minerui/minerui-taro';
+
 
 const app = createApp();
 app.use(Navbar);

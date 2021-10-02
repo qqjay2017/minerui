@@ -10,8 +10,7 @@
 import { createApp } from 'vue';
 //vue
 import { Range } from '@minerui/minerui';
-//taro
-import { Range } from '@minerui/minerui-taro';
+
 
 const app = createApp();
 app.use(Range);

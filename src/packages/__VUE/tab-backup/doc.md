@@ -10,8 +10,7 @@
 import { createApp } from 'vue';
 // vue
 import { Tab, TabPanel,Swiper } from '@minerui/minerui';
-// taro
-import { Tab, TabPanel,Swiper } from '@minerui/minerui-taro';
+
 
 const app = createApp();
 app.use(Tab).use(TabPanel).use(Swiper);

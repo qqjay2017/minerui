@@ -10,8 +10,7 @@
 import { createApp } from 'vue';
 //vue
 import { Radio,RadioGroup } from '@minerui/minerui';
-//taro
-import { Radio,RadioGroup } from '@minerui/minerui-taro';
+
 
 const app = createApp();
 app.use(Radio);

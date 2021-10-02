@@ -11,8 +11,7 @@
 import { createApp } from 'vue';
 // vue
 import { Collapse,CollapseItem } from '@minerui/minerui';
-// taro
-import { Collapse,CollapseItem } from '@minerui/minerui-taro';
+
 
 const app = createApp();
 app.use(Collapse);

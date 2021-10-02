@@ -10,8 +10,6 @@
 import { createApp } from 'vue';
 // vue
 import { Checkbox,CheckboxGroup,Icon } from '@minerui/minerui';
-// taro
-import { Checkbox,CheckboxGroup,Icon } from '@minerui/minerui-taro';
 
 const app = createApp();
 app.use(Checkbox);

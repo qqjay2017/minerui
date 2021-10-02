@@ -10,8 +10,7 @@
 import { createApp } from 'vue';
 // vue
 import { Layout,Row,Col } from '@minerui/minerui';
-// taro
-import { Layout,Row,Col } from '@minerui/minerui-taro';
+
 
 const app = createApp();
 app.use(Layout);

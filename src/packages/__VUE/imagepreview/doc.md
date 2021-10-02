@@ -11,8 +11,7 @@ import { createApp, reactive, toRefs } from 'vue';
 
 // vue
 import { ImagePreview, Swiper, SwiperItem, Popup } from '@minerui/minerui';
-// taro
-import { ImagePreview, Swiper, SwiperItem, Popup } from '@minerui/minerui-taro';
+
 
 
 const app = createApp();

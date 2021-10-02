@@ -69,15 +69,6 @@ npm install babel-plugin-import --save-dev
         "camel2DashComponentName": false
       },
       'minerui3-vue'
-    ],
-    [
-      "import",
-      {
-        "libraryName": "@minerui/minerui-taro",
-        "libraryDirectory": "dist/packages/_es",
-        "camel2DashComponentName": false
-      },
-      'minerui3-taro'
     ]
   ]
 }

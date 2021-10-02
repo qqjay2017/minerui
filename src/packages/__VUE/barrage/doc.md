@@ -10,8 +10,6 @@
 import { createApp } from 'vue';
 //vue
 import { Barrage } from '@minerui/minerui';
-//taro
-import { Barrage } from '@minerui/minerui-taro';
 
 const app = createApp();
 app.use(Barrage);

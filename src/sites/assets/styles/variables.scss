@@ -1,12 +1,6 @@
 // doc
 $doc-default-color: #fa2c19;
-$doc-default-primary-bg: linear-gradient(
-  135deg,
-  rgba(250, 25, 44, 1) 0%,
-  rgba(250, 39, 40, 1) 45%,
-  rgba(250, 56, 31, 1) 83%,
-  rgba(250, 63, 25, 1) 100%
-);
+$doc-default-primary-bg: linear-gradient(135deg, #f4c543 0%, #ec9b37 100%);
 
 // clolr
 // 红色
@@ -35,8 +29,8 @@ $theme-red-gradient: linear-gradient(
 // 白色
 $theme-white: #fff;
 $theme-white-word: #1a1a1a;
-$theme-white-input: #ccc;
-$theme-white-border: #d8d8d8;
+$theme-white-input: #4f4f4f;
+$theme-white-border: #f3f3f4;
 $theme-white-actice: #fa2c19;
 $theme-white-select-border: #f0f2f5;
 $theme-white-select-word: #666;
@@ -55,15 +49,15 @@ $theme-white-circle-border: #e5e5e5;
 $theme-white-index-desc: #959fb1;
 
 // 黑色
-$theme-black-word: #ccc;
-$theme-black-input: #ccc;
-$theme-black-border: #d8d8d8;
+$theme-black-word: #4f4f4f;
+$theme-black-input: #4f4f4f;
+$theme-black-border: #f3f3f4;
 $theme-black-actice: #fff;
 $theme-black-select-bg: #1d1d1d;
 $theme-black-select-border: #c1c1c3;
 $theme-black-select-hover: #797a7b;
 $theme-black-select-word: #fff;
-$theme-black-box-border: #6b5554;
+$theme-black-box-border: #f3f3f4;
 $theme-black-footer-word1: #fff;
 $theme-black-footer-word2: #f5f5f5;
 $theme-black-footer-word3: #f5f5f5;
@@ -97,12 +91,11 @@ $minerui-doc-text-light-blue: rgba(69, 90, 100, 0.6);
 $minerui-doc-background-color: #f7f8fa;
 $minerui-doc-grey: #999;
 $minerui-doc-dark-grey: #666;
-$minerui-doc-light-grey: #ccc;
+$minerui-doc-light-grey: #4f4f4f;
 $minerui-doc-border-color: #f1f4f8;
 $minerui-doc-code-color: #58727e;
 $minerui-doc-code-background-color: #f1f4f8;
-$minerui-doc-code-font-family: 'Source Code Pro', 'Monaco', 'Inconsolata',
-  monospace;
+$minerui-doc-code-font-family: 'Source Code Pro', 'Monaco', 'Inconsolata', monospace;
 $minerui-doc-padding: 24px;
 $minerui-doc-row-max-width: 1680px;
 $minerui-doc-nav-width: 220px;

@@ -10,8 +10,7 @@
 import { createApp } from 'vue';
 //vue
 import { PullRefresh } from '@minerui/minerui';
-//taro
-import { PullRefresh } from '@minerui/minerui-taro';
+
 
 const app = createApp();
 app.use(PullRefresh);

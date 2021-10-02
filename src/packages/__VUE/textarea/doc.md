@@ -10,8 +10,7 @@
 import { createApp } from 'vue';
 //vue
 import { TextArea } from '@minerui/minerui';
-//taro
-import { TextArea } from '@minerui/minerui-taro';
+
 
 const app = createApp();
 app.use(TextArea);

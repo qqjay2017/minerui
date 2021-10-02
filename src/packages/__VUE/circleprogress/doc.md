@@ -10,8 +10,6 @@
 import { createApp } from 'vue';
 //vue
 import { CirecleProgress } from '@minerui/minerui';
-//taro
-import { CirecleProgress } from '@minerui/minerui-taro';
 
 const app = createApp();
 app.use(CirecleProgress);

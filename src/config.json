@@ -97,6 +97,18 @@
           "desc": "图标",
           "author": "richard1015"
         },
+        {
+          "version": "3.0.0",
+          "name": "SvgIcon",
+          "taro": false,
+          "sort": 3,
+          "cName": "svg在线图标",
+          "type": "component",
+          "show": true,
+          "desc": "svg在线图标",
+          "author": "huang"
+        },
+       
        
         {
           "version": "3.0.0",

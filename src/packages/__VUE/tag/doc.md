@@ -11,8 +11,7 @@
 import { createApp } from 'vue';
 // vue
 import { Tag } from '@minerui/minerui';
-// taro
-import { Tag } from '@minerui/minerui-taro';
+
 
 const app = createApp();
 app.use(Tag);

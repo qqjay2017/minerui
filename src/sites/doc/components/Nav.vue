@@ -11,30 +11,17 @@
           :key="_package"
           v-show="_package.show"
         >
-          <router-link
-            v-if="!_package.isLink"
-            :to="_package.name.toLowerCase()"
-            >{{ _package.cName }}</router-link
-          >
-          <a v-else :href="_package.name" target="_blank">{{
-            _package.cName
-          }}</a>
+          <router-link v-if="!_package.isLink" :to="_package.name.toLowerCase()">{{ _package.cName }}</router-link>
+          <a v-else :href="_package.name" target="_blank">{{ _package.cName }}</a>
         </li>
       </ul>
     </ol>
     <ol v-for="_nav in nav" :key="_nav">
       <li>{{ _nav.name }}</li>
       <ul>
-        <template
-          :class="{ active: isActive(_package.name) }"
-          v-for="_package in _nav.packages"
-          :key="_package"
-        >
+        <template :class="{ active: isActive(_package.name) }" v-for="_package in _nav.packages" :key="_package">
           <li v-if="_package.show">
-            <router-link
-              :to="_package.name.toLowerCase()"
-              :class="{ active: isActive(_package.name) }"
-            >
+            <router-link :to="_package.name.toLowerCase()" :class="{ active: isActive(_package.name) }">
               {{ _package.name }}&nbsp;&nbsp;<b>{{ _package.cName }}</b>
             </router-link>
           </li>
@@ -53,10 +40,7 @@ export default defineComponent({
     const isActive = computed(() => {
       return function (name: string) {
         const currentValue = RefData.getInstance().currentRoute.value;
-        let value =
-          currentValue.indexOf('-taro') > -1
-            ? currentValue.split('-taro')[0]
-            : currentValue;
+        let value = currentValue.indexOf('-taro') > -1 ? currentValue.split('-taro')[0] : currentValue;
         return value == name.toLowerCase();
       };
     });
@@ -116,6 +100,10 @@ export default defineComponent({
             background-size: 100% 100%;
           }
         }
+        a {
+          display: inline-block;
+          line-height: 48px;
+        }
       }
       > ul {
         li {
@@ -127,6 +115,8 @@ export default defineComponent({
             }
           }
           a {
+            display: inline-block;
+            line-height: 48px;
             &.router-link-active,
             &.active {
               color: $doc-default-color !important;

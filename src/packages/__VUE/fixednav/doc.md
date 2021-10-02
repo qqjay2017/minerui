@@ -10,8 +10,7 @@
 import { createApp } from 'vue';
 // vue
 import { FixedNav } from '@minerui/minerui';
-// taro
-import { FixedNav } from '@minerui/minerui-taro';
+
 
 const app = createApp();
 app.use(FixedNav);

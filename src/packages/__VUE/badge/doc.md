@@ -11,8 +11,6 @@
 import { createApp } from 'vue';
 // vue
 import { Badge } from '@minerui/minerui';
-// taro
-import { Badge } from '@minerui/minerui-taro';
 
 const app = createApp();
 app.use(Badge);

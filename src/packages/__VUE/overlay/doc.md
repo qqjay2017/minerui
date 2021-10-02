@@ -10,8 +10,7 @@
 import { createApp } from 'vue';
 // vue
 import { OverLay } from '@minerui/minerui';
-// taro
-import { OverLay } from '@minerui/minerui-taro';
+
 
 const app = createApp();
 app.use(OverLay);

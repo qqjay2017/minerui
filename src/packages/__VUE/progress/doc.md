@@ -10,8 +10,7 @@
 import { createApp } from 'vue';
 //vue
 import { Progress,Icon } from '@minerui/minerui';
-//taro
-import { Progress,Icon } from '@minerui/minerui-taro';
+
 
 const app = createApp();
 app.use(Progress);

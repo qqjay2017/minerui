@@ -10,8 +10,7 @@
 import { createApp } from 'vue';
 // vue
 import { ActionSheet, Popup } from '@minerui/minerui';
-// taro
-import { ActionSheet, Popup } from '@minerui/minerui-taro';
+
 
 const app = createApp();
 app.use(ActionSheet).use(Popup);

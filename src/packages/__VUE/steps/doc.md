@@ -10,8 +10,7 @@
 import { createApp } from 'vue';
 //vue
 import { Steps, Step } from '@minerui/minerui';
-//taro
-import { Steps, Step  } from '@minerui/minerui-taro';
+
 
 const app = createApp();
 app.use(Steps);

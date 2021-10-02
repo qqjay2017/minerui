@@ -10,8 +10,7 @@
 import { createApp } from 'vue';
 //vue
 import { NumberKeyboard,Popup } from '@minerui/minerui';
-//taro
-import { NumberKeyboard,Popup } from '@minerui/minerui-taro';
+
 
 const app = createApp();
 app.use(NumberKeyboard);

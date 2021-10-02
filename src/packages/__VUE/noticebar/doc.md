@@ -13,8 +13,7 @@
 import { createApp } from 'vue';
 // vue
 import { NoticeBar } from '@minerui/minerui';
-// taro
-import { NoticeBar } from '@minerui/minerui-taro';
+
 
 const app = createApp();
 app.use(NoticeBar);

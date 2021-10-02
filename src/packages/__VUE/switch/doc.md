@@ -10,8 +10,7 @@
 import { createApp } from 'vue';
 //vue
 import { Switch } from '@minerui/minerui';
-//taro
-import { Switch } from '@minerui/minerui-taro';
+
 
 const app = createApp();
 app.use(Switch);

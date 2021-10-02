@@ -1,9 +1,7 @@
 <template>
-  <!-- <div class="doc-header" :style="{ background: themeColor === 'red' ? headerBg : themeColor }" :class="`doc-header-${data.theme}`"> -->
   <div class="doc-header" :class="themeName()">
-    <div class="header-logo">
-      <span class="logo-border"></span>
-      <span class="version" @click="toHome">v{{ version }}</span>
+    <div class="header-logo" @click="toHome">
+      <span class="version">v{{ version }}</span>
     </div>
     <div class="header-nav">
       <Search />
@@ -42,7 +40,7 @@ export default defineComponent({
     });
     const data = reactive({
       theme: 'white',
-      // headerBg: 'url(' + require('../../assets/images/header-bg.png') + ')',
+      //  headerBg: 'url(' + require('../../assets/images/header-bg.png') + ')',
       verson: '3.x',
       navIndex: 0,
       activeIndex: 0,
@@ -112,6 +110,7 @@ export default defineComponent({
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-image: $doc-header-bg;
     height: $doc-header-height;
     line-height: $doc-header-height;
     text-align: left;

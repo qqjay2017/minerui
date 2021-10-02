@@ -9,8 +9,7 @@
 import { createApp } from 'vue';
 //vue
 import { Tabbar,TabbarItem } from '@minerui/minerui';
-//taro
-import { Tabbar,TabbarItem } from '@minerui/minerui-taro';
+
 
 const app = createApp();
 app.use(Tabbar);

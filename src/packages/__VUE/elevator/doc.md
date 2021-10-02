@@ -10,8 +10,7 @@
 import { createApp } from 'vue';
 // vue
 import { Elevator } from '@minerui/minerui';
-// taro
-import { Elevator } from '@minerui/minerui-taro';
+
 
 const app = createApp();
 app.use(Elevator);

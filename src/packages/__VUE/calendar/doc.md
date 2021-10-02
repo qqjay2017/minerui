@@ -10,8 +10,6 @@
 import { createApp } from 'vue';
 // vue
 import { Calendar,Popup } from '@minerui/minerui';
-// taro
-import { Calendar,Popup } from '@minerui/minerui-taro';
 
 const app = createApp();
 app.use(Calendar);

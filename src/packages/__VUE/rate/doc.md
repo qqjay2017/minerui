@@ -10,8 +10,7 @@
 import { createApp } from 'vue';
 //vue
 import { Rate,Icon } from '@minerui/minerui';
-//taro
-import { Rate,Icon } from '@minerui/minerui-taro';
+
 
 const app = createApp();
 app.use(Rate);

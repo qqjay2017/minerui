@@ -11,8 +11,7 @@
 import { createApp } from 'vue';
 // vue
 import { Popover } from '@minerui/minerui';
-// taro
-import { Popover } from '@minerui/minerui-taro';
+
 
 const app = createApp();
 app.use(Popover);

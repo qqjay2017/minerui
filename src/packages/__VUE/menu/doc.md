@@ -10,8 +10,7 @@
 import { createApp } from 'vue';
 // vue
 import { Menu } from '@minerui/minerui';
-// taro
-import { Menu,MenuItem } from '@minerui/minerui-taro';
+
 const app = createApp();
 app.use(Menu);
 app.use(MenuItem);

@@ -1,11 +1,7 @@
 <template>
   <view :class="classes" :style="baseStyle" @click="handleClick">
     <slot>
-      <view
-        class="miner-cell__title"
-        :class="{ icon: icon || $slots.icon }"
-        v-if="title || subTitle || icon"
-      >
+      <view class="miner-cell__title" :class="{ icon: icon || $slots.icon }" v-if="title || subTitle || icon">
         <slot v-if="$slots.icon" name="icon"></slot>
         <miner-icon v-else-if="icon" class="icon" :name="icon"></miner-icon>
         <template v-if="subTitle">
@@ -16,19 +12,10 @@
           {{ title }}
         </template>
       </view>
-      <view
-        v-if="desc"
-        class="miner-cell__value"
-        :style="{ 'text-align': descTextAlign }"
-        >{{ desc }}</view
-      >
+      <view v-if="desc" class="miner-cell__value" :style="{ 'text-align': descTextAlign }">{{ desc }}</view>
 
       <slot v-if="$slots.link" name="link"></slot>
-      <miner-icon
-        v-else-if="isLink || to"
-        class="miner-cell__link"
-        name="right"
-      ></miner-icon>
+      <miner-icon v-else-if="isLink || to" class="miner-cell__link" name="right"></miner-icon>
     </slot>
   </view>
 </template>
@@ -80,9 +67,7 @@ export default create({
         //    router.push(props.to)
         // }
       } else if (props.url) {
-        props.replace
-          ? location.replace(props.url)
-          : (location.href = props.url);
+        props.replace ? location.replace(props.url) : (location.href = props.url);
       }
     };
 
