@@ -5,7 +5,37 @@ import Markdown from 'vite-plugin-md';
 import path from 'path';
 import config from './package.json';
 const hljs = require('highlight.js'); // https://highlightjs.org/
+import { createPlugin, vueDocFiles } from 'vite-plugin-vuedoc';
+import markdownItContainer from 'markdown-it-container';
 const resolve = path.resolve;
+
+const containers = ['success', 'warning', 'info', 'error'].map((type) => {
+  return [
+    markdownItContainer,
+    type,
+    {
+      validate: function (params: string) {
+        const str = params.trim();
+        if (str === type || str.startsWith(`${type} `)) {
+          return [str, str === type ? '' : str.substr(type.length + 1)];
+        }
+        return null;
+      },
+      render: function (tokens: any[], idx: number) {
+        const str = tokens[idx].info.trim();
+        const m = [str, str === type ? '' : str.substr(type.length + 1)];
+        if (tokens[idx].nesting === 1) {
+          // opening tag
+          return `<p><e-alert type="${type}" :closable="false" title="${m[1]}" >`;
+        } else {
+          // closing tag
+          return '</e-alert></p>';
+        }
+      }
+    }
+  ];
+});
+
 // https://vitejs.dev/config/
 export default defineConfig({
   base: '/',
@@ -39,24 +69,33 @@ export default defineConfig({
     }
   },
   plugins: [
-    vue({
-      include: [/\.vue$/, /\.md$/]
-    }),
-    Markdown({
-      // default options passed to markdown-it
-      // see: https://markdown-it.github.io/markdown-it/
-      markdownItOptions: {
-        highlight: function (str, lang) {
-          if (lang && hljs.getLanguage(lang)) {
-            try {
-              return hljs.highlight(lang, str).value;
-            } catch (__) {}
-          }
-
-          return ''; // 使用额外的默认转义
-        }
+    // Markdown({
+    //   // default options passed to markdown-it
+    //   // see: https://markdown-it.github.io/markdown-it/
+    //   markdownItOptions: {
+    //     highlight: function (str, lang) {
+    //       if (lang && hljs.getLanguage(lang)) {
+    //         try {
+    //           return hljs.highlight(lang, str).value;
+    //         } catch (__) {}
+    //       }
+    //
+    //       return ''; // 使用额外的默认转义
+    //     }
+    //   }
+    // }),
+    createPlugin({
+      markdownIt: {
+        plugins: [...containers]
+      },
+      highlight: {
+        theme: 'one-light'
       }
+    }),
+    vue({
+      include: [/\.vue$/, /\.md$/, ...vueDocFiles]
     })
+
     // legacy({
     //   targets: ['defaults', 'not IE 11']
     // })

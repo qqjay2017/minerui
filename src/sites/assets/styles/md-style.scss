@@ -134,7 +134,7 @@
           color: $minerui-doc-blue;
           font-weight: 600;
           font-size: 11px;
-          background-color: fade($minerui-doc-blue, 10%);
+          background-color: #f7f8fa;
           border-radius: 20px;
         }
       }
@@ -181,7 +181,7 @@
     border: 0 none;
     border-top: 1px solid #eee;
   }
-
+  code,
   p > code,
   li > code,
   table code {
@@ -194,6 +194,7 @@
     background-color: $minerui-doc-background-color;
     border-radius: 4px;
     -webkit-font-smoothing: antialiased;
+    font-family: 'Ubuntu';
   }
 
   p > code {
@@ -258,5 +259,15 @@
         text-decoration: underline;
       }
     }
+  }
+}
+a.markdownIt-Anchor {
+  display: none;
+}
+.demo-space {
+  display: flex;
+  align-items: center;
+  > view {
+    margin-left: 14px;
   }
 }
