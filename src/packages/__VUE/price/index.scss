@@ -1,7 +1,7 @@
 .miner-price {
   font-size: $font-size-3;
   display: inline;
-  color: $primary-color;
+  color: $primary-color-dart;
   &--symbol {
     display: inline-block;
     font-size: $font-size-3;
@@ -17,6 +17,7 @@
   }
   &--small {
     display: inline-block;
+    margin-left: 4px;
     font-size: $font-size-4;
   }
 }

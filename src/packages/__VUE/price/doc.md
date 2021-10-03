@@ -3,6 +3,7 @@
 ### 介绍
 
 用来对商品价格数值的小数点前后部分应用不同样式，还支持人民币符号、千位分隔符、设置小数点位数等功能。
+显示数值将会经过`toFixed`处理
 
 ### 安装
 
@@ -20,36 +21,45 @@ app.use(Price);
 
 ### 基本用法
 
-``` html
-<miner-price :price="1010" :need-symbol="false" :thousands="true" />
+
+```vue demo src="./demo/base.vue"
+
 ```
 
 ### 有人民币符号，无千位分隔
 
-``` html
-<miner-price :price="10010.01" :need-symbol="true" :thousands="false" />
+
+
+```vue demo src="./demo/symbol.vue"
+
 ```
 
 ### 带人民币符号，有千位分隔，保留小数点后三位
 
-``` html
-<miner-price :price="15213.1221" :decimal-digits="3" :need-symbol="true" :thousands="true" />
+```vue demo src="./demo/digits.vue"
+
 ```
+
+### 美元
+
+```vue demo src="./demo/dollar.vue"
+
+```
+
+### 单位在后面
+
+
+```vue demo src="./demo/unit.vue"
+
+```
+
+
 ### 异步随机变更
 
-``` html
-<miner-price :price="price" :decimal-digits="3" :need-symbol="true" :thousands="true" />
-```
-``` javascript
-setup() {
-    const price = ref(0);
-    setInterval(() => {
-        price.value = Math.random()*10000000;
-    }, 1000);
-    return {
-        price
-    };
-}
+
+
+```vue demo src="./demo/random.vue"
+
 ```
 
 ### Prop
@@ -61,3 +71,4 @@ setup() {
 | symbol         | 符号类型                 | String  | &yen;  |
 | decimal-digits | 小数位位数               | Number  | 2      |
 | thousands      | 是否按照千分号形式显示   | Boolean | false  |
+| unit      | 后面的单位   | String | ''  |

@@ -1,16 +1,15 @@
 <template>
   <view :class="classes">
-    <view
-      v-if="needSymbol"
-      class="miner-price--symbol"
-      v-html="showSymbol"
-    ></view>
+    <view v-if="needSymbol" class="miner-price--symbol" v-html="showSymbol"></view>
     <view class="miner-price--big">
       {{ formatThousands(price) }}
     </view>
-    <view class="miner-price--point">.</view>
-    <view class="miner-price--small">
+    <view class="miner-price--point" v-if="decimalDigits > 0">.</view>
+    <view class="miner-price--big" v-if="decimalDigits > 0">
       {{ formatDecimal(price) }}
+    </view>
+    <view class="miner-price--small" v-if="unit">
+      {{ unit }}
     </view>
   </view>
 </template>
@@ -41,6 +40,10 @@ export default create({
     thousands: {
       type: Boolean,
       default: false
+    },
+    unit: {
+      type: String,
+      default: ''
     }
   },
 
@@ -64,10 +67,7 @@ export default create({
       }
       if (checkPoint(num)) {
         num = Number(num).toFixed(props.decimalDigits);
-        num =
-          typeof num.split('.') === 'string'
-            ? num.split('.')
-            : num.split('.')[0];
+        num = typeof num.split('.') === 'string' ? num.split('.') : num.split('.')[0];
       } else {
         num = num.toString();
       }
@@ -83,10 +83,7 @@ export default create({
       }
       if (checkPoint(decimalNum)) {
         decimalNum = Number(decimalNum).toFixed(props.decimalDigits);
-        decimalNum =
-          typeof decimalNum.split('.') === 'string'
-            ? 0
-            : decimalNum.split('.')[1];
+        decimalNum = typeof decimalNum.split('.') === 'string' ? 0 : decimalNum.split('.')[1];
       } else {
         decimalNum = 0;
       }
