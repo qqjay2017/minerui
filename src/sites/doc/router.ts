@@ -21,7 +21,7 @@ const pagesRouter: Array<RouteRecordRaw> = [];
 /** vite */
 const modulesPage = import.meta.glob('/src/packages/__VUE/**/doc.md');
 for (const path in modulesPage) {
-  let name = (/packages\/__VUE\/(.*)\/doc.md/.exec(path) as any[])[1];
+  const name = (/packages\/__VUE\/(.*)\/doc.md/.exec(path) as any[])[1];
   pagesRouter.push({
     path: '/' + name,
     component: modulesPage[path],
@@ -29,16 +29,16 @@ for (const path in modulesPage) {
   });
 }
 
-/** vite-taro **/
-const modulesPageTaro = import.meta.glob('/src/packages/__VUE/**/*.taro.md');
-for (const path in modulesPageTaro) {
-  let name = (/packages\/__VUE\/(.*)\/doc.taro.md/.exec(path) as any[])[1];
-  pagesRouter.push({
-    path: `/${name}-taro`,
-    component: modulesPageTaro[path],
-    name: `${name}-taro`
-  });
-}
+// /** vite-taro **/
+// const modulesPageTaro = import.meta.glob('/src/packages/__VUE/**/*.taro.md');
+// for (const path in modulesPageTaro) {
+//   const name = (/packages\/__VUE\/(.*)\/doc.taro.md/.exec(path) as any[])[1];
+//   pagesRouter.push({
+//     path: `/${name}-taro`,
+//     component: modulesPageTaro[path],
+//     name: `${name}-taro`
+//   });
+// }
 
 /** webpack */
 // const docs = require.context('@/docs', true, /\.md$/);
@@ -55,7 +55,7 @@ for (const path in modulesPageTaro) {
 /** vite */
 const modulesDocs = import.meta.glob('/src/docs/*.md');
 for (const path in modulesDocs) {
-  let name = (/docs\/(.*).md/.exec(path) as any[])[1];
+  const name = (/docs\/(.*).md/.exec(path) as any[])[1];
   pagesRouter.push({
     path: '/' + name,
     component: modulesDocs[path],
@@ -102,14 +102,13 @@ const router = createRouter({
     }
   }
 });
+console.log(routes);
 router.afterEach((to, from) => {
   window.scrollTo(0, 0);
-  try {
-    setTimeout(() => {
-      new Image().src = `${config.baseUrl}/openapi/point?p=${encodeURIComponent(
-        JSON.stringify(location)
-      )}`;
-    }, 500);
-  } catch (error) {}
+  // try {
+  //   setTimeout(() => {
+  //     new Image().src = `${config.baseUrl}/openapi/point?p=${encodeURIComponent(JSON.stringify(location))}`;
+  //   }, 500);
+  // } catch (error) {}
 });
 export default router;

@@ -7,19 +7,7 @@
         <div class="content-smile"> </div>
         <div class="content-subTitle">Vue3 组件库</div>
         <div class="content-button">
-          <div class="leftButton" @click="toIntro">
-            <div class="leftButtonText">开始使用</div>
-          </div>
-
-          <iframe
-            style="margin-left: 20px"
-            src="https://ghbtns.com/github-btn.html?user=qqjay2017&repo=minerui&type=star&count=true&size=large"
-            frameborder="0"
-            scrolling="0"
-            width="170"
-            height="30"
-            title="GitHub"
-          ></iframe>
+          <miner-button class="leftButton" @click="toIntro" type="primary"> 开始使用 </miner-button>
         </div>
       </div>
     </div>
@@ -43,8 +31,8 @@ export default defineComponent({
   setup() {
     const data = reactive({
       // theme: 'white',
-      articleList: new Array(),
-      casesImages: new Array(),
+      articleList: [],
+      casesImages: [],
       currentCaseItem: {},
       currentCaseIndex: 0,
       localTheme: localStorage.getItem('minerui-theme-color'),
@@ -548,10 +536,10 @@ export default defineComponent({
 }
 .doc-content-index {
   display: flex;
-  height: 926px;
+  height: 626px;
 
   background-color: #f5f6f8;
-  min-width: 1200px;
+  min-width: 900px;
   .content-left {
     padding: 15% 0 0 8.8%;
     // margin: auto 0;

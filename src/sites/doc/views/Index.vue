@@ -19,7 +19,6 @@
         </div>
         <router-view />
       </div>
-      <doc-demo-preview :url="demoUrl"></doc-demo-preview>
     </div>
   </div>
 </template>

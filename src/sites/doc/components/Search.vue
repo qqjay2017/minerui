@@ -1,5 +1,6 @@
 <template>
   <div class="search-box">
+    <miner-svgicon name="ant-design:search-outlined"></miner-svgicon>
     <input
       type="text"
       class="search-input"
@@ -132,9 +133,6 @@ export default defineComponent({
     padding-left: 42px;
     font-size: 14px;
     vertical-align: middle;
-    background-color: transparent;
-    background-image: url('../../assets/images/input-search.png');
-    background-repeat: no-repeat;
     font-size: 14px;
     color: #fff;
     &:focus {

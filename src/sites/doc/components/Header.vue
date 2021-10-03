@@ -1,23 +1,24 @@
 <template>
   <div class="doc-header" :class="themeName()">
-    <div class="header-logo" @click="toHome">
-      <span class="version">v{{ version }}</span>
-    </div>
-    <div class="header-nav">
-      <Search />
-      <div class="nav-box">
-        <ul class="nav-list">
-          <li class="nav-item" v-for="item in header" :key="item.name" :class="{ active: isActive(item.name) }">
-            <a :href="item.path">
-              {{ item.cName }}
-            </a>
-          </li>
+    <div class="doc-header-inner">
+      <div class="header-logo" @click="toHome">
+        <span class="version">v{{ version }}</span>
+      </div>
+      <div class="header-nav">
+        <Search />
+        <div class="nav-box">
+          <ul class="nav-list">
+            <li class="nav-item" v-for="item in header" :key="item.name" :class="{ active: isActive(item.name) }">
+              <a :href="item.path">
+                {{ item.cName }}
+              </a>
+            </li>
 
-          <li class="nav-item">
-            <a class="user-link" target="_blank" href="https://github.com/qqjay2017/minerui"></a>
-            <a class="user-link gitee" target="_blank" href="https://gitee.com/jd-platform-opensource/minerui"></a>
-          </li>
-        </ul>
+            <li class="nav-item">
+              <a class="user-link" target="_blank" href="https://github.com/qqjay2017/minerui"></a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -106,16 +107,25 @@ export default defineComponent({
     top: 0;
     left: 0;
     right: 0;
-    min-width: 1300px;
+    min-width: 900px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-image: $doc-header-bg;
     height: $doc-header-height;
     line-height: $doc-header-height;
+    box-shadow: 0 8px 24px -2px rgb(0 0 0 / 5%);
     text-align: left;
-    padding: 0 50px;
+    padding: 0 28px;
     font-size: 20px;
+    .doc-header-inner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
 }
 .header {
@@ -141,8 +151,6 @@ export default defineComponent({
       margin-top: -13px;
     }
     .version {
-      position: absolute;
-      right: 76px;
       font-size: 14px;
     }
   }
@@ -153,11 +161,11 @@ export default defineComponent({
     float: right;
     width: calc(100% - 140px);
     min-width: 900px;
-    padding: 0 20px;
+    padding: 0;
     .nav-box {
       margin-right: 140px;
       .nav-list {
-        min-width: 445px;
+        min-width: 45px;
         display: flex;
         list-style: none;
         align-items: center;
