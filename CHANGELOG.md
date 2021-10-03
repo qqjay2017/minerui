@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.0.5](https://github.com/qqjay2017/minerui/compare/v0.0.4...v0.0.5)
+`2021-10-03`
+
+
+### Features
+
+* publish脚本 ([045bdc2](https://github.com/qqjay2017/minerui/commit/045bdc2f4a5430bf47ffa7b3a1766871ad3f338a))
+
 ## [0.0.4](https://github.com/qqjay2017/minerui/compare/v0.0.3...v0.0.4)
 `2021-10-03`
 
