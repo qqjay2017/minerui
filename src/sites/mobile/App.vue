@@ -5,7 +5,9 @@
     </div>
     {{ title }}
   </div>
-  <router-view />
+  <div class="doc-content-document">
+    <router-view />
+  </div>
 </template>
 <script lang="ts">
 import { defineComponent, ref, watch, computed } from 'vue';
@@ -26,9 +28,7 @@ export default defineComponent({
 
     // 是否显示 title
     const isShow = computed(() => {
-      return (
-        title.value && title.value != '/' && !title.value.includes('-taro')
-      );
+      return title.value && title.value != '/' && !title.value.includes('-taro');
     });
     // 当当前路由发生变化时，调用回调函数
     watch(
@@ -38,11 +38,9 @@ export default defineComponent({
         const { hash } = window.top.location;
         if (!isMobile && route.hash != hash) {
           // window.top.location.replace(`${origin}${pathname}#/${route.hash}`);
-          title.value =
-            (route?.meta?.ComponentName as string) || (route.name as string);
+          title.value = (route?.meta?.ComponentName as string) || (route.name as string);
         } else {
-          title.value =
-            (route?.meta?.ComponentName as string) || (route.name as string);
+          title.value = (route?.meta?.ComponentName as string) || (route.name as string);
         }
       },
       {

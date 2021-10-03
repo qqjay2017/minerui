@@ -1,12 +1,12 @@
 @import 'highlight.scss';
 
-.doc-content-document {
+.vuedoc {
   position: relative;
   background: #fff;
-  padding-top: 48px;
+  padding-top: 60px;
   padding-bottom: 48px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
   .card {
     margin-bottom: 24px;
     padding: 24px;
@@ -181,7 +181,7 @@
     border: 0 none;
     border-top: 1px solid #eee;
   }
-  code,
+
   p > code,
   li > code,
   table code {
@@ -261,13 +261,30 @@
     }
   }
 }
+p {
+  code {
+    display: inline;
+    margin: 0 2px;
+    padding: 2px 5px;
+    font-size: 14px;
+    font-family: inherit;
+    word-break: keep-all;
+
+    border-radius: 4px;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
 a.markdownIt-Anchor {
   display: none;
 }
+
 .demo-space {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   > view {
     margin-left: 14px;
+    margin-bottom: 14px;
   }
 }

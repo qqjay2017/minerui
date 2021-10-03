@@ -2,9 +2,9 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
 import MinerUI from '@/packages/minerui.vue';
+import 'vite-plugin-vuedoc/style.css';
 import '@/sites/assets/styles/reset.scss';
+import '@/sites/assets/styles/md-style.scss';
 import '@/packages/utils/touchEmulator';
-createApp(App)
-  .use(router)
-  .use(MinerUI)
-  .mount('#app');
+import DemoBlock from '@/sites/doc/components/demo-block';
+createApp(App).use(router).component('demo-block', DemoBlock).use(MinerUI).mount('#app');
