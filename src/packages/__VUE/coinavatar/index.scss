@@ -1,0 +1,16 @@
+.miner-coinavatar {
+  border-radius: 50%;
+  background-color: #fff;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $coinavatar-default-border-color;
+
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__img {
+    width: 90%;
+    height: 90%;
+  }
+}

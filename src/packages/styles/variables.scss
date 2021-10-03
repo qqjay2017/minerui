@@ -310,5 +310,9 @@ $pagination-item-border-width: 1px !default;
 $pagination-item-border-radius: 2px !default;
 $pagination-prev-next-padding: 0 11px !default;
 
+// 币种头像
+
+$coinavatar-default-border-color: #e2eaf6 !default;
+
 @import './mixins/index';
 @import './animation/index';
