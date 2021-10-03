@@ -6,7 +6,7 @@ yarn
 yarn release
 
 yarn build
-
+yarn login
 yarn publish
 
 
