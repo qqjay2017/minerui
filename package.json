@@ -47,6 +47,7 @@
     "prepare": "husky install",
     "test": "jest",
     "release": "standard-version -a",
+    "npm:publish": "./script/publish.sh",
     "codeformat": "prettier --write ."
   },
   "standard-version": {
