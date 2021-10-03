@@ -23,7 +23,8 @@ export default defineComponent({
 
     //返回demo页
     const goBack = () => {
-      router.back();
+      location.replace('demo.html' + '#/');
+      // router.back();
     };
 
     // 是否显示 title
