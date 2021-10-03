@@ -23,36 +23,32 @@ app.use(SvgIcon);
 
 `SvgIcon` 的 `name` 属性支持传入[图标名称](https://icon-sets.iconify.design/mdi/airplane-takeoff/)。
 
-```html
-<miner-svgicon name="ant-design:github-filled"></miner-svgicon>
-<miner-svgicon name="mdi:airplane-takeoff"></miner-svgicon>
+```vue demo src="./demo/base.vue"
+
 ```
 
 ### 图标颜色
 
-`Icon` 的 `color` 属性用来设置图标的颜色。
+`SvgIcon` 的 `color` 属性用来设置图标的颜色。
 
-```html 
-<miner-svgicon name="ant-design:github-filled" color="#fa2c19"></miner-svgicon>
-<miner-svgicon name="mdi:airplane-takeoff" color="#64b578"></miner-svgicon>
+```vue demo src="./demo/color.vue"
+
 ```
 
 ### 图标大小
 
-`Icon` 的 `size` 属性用来设置图标的尺寸大小，默认单位为 `px`。
+`SvgIcon` 的 `size` 属性用来设置图标的尺寸大小，默认单位为 `px`。
 
-```html
-<miner-svgicon name="ant-design:github-filled"></miner-svgicon>
-<miner-svgicon name="mdi:airplane-takeoff" size="24"></miner-svgicon>
-<miner-svgicon name="mdi:airplane-takeoff" size="26"></miner-svgicon>
+```vue demo src="./demo/size.vue"
+
+```
 
 ### 图标前缀
 
-`Icon` 的 `prefix` 属性用来设置图标前缀。
+`SvgIcon` 的 `prefix` 属性用来设置图标前缀。
 
-```html
-<miner-svgicon prefix="ant-design" name="github-filled"></miner-svgicon>
-<miner-svgicon prefix="mdi" name="airplane-takeoff" size="24"></miner-svgicon>
+```vue demo src="./demo/prefix.vue"
+
 ```
 
 
@@ -65,6 +61,7 @@ app.use(SvgIcon);
 | name         | 图标名称或图片链接               | String           | -                |
 | color        | 图标颜色                         | String           | -                |
 | size         | 图标大小，如 `20px` `2em` `2rem` | String or Number | -                |
+| prefix         | 图标前缀，如 `ant-design` | String or Number | -                |
 
 ### Events
 
