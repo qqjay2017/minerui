@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.0.8](https://github.com/qqjay2017/minerui/compare/v0.0.7...v0.0.8)
+`2021-10-04`
+
+
+### Bug Fixes
+
+* 修复语言包的导出类型 ([6035618](https://github.com/qqjay2017/minerui/commit/6035618ff01c3b1cdaa2db66ac96a2cc36f664a0))
+
 ## [0.0.7](https://github.com/qqjay2017/minerui/compare/v0.0.6...v0.0.7)
 `2021-10-04`
 
