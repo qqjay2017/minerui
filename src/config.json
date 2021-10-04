@@ -143,6 +143,17 @@
           "sort": 2,
           "show": true,
           "author": "huang"
+        },
+        {
+          "version": "3.0.0",
+          "name": "Skeleton",
+          "taro": false,
+          "type": "component",
+          "cName": "骨架屏",
+          "desc": "骨架屏,用于加载数据时候占位",
+          "sort": 3,
+          "show": true,
+          "author": "huang"
         }
       ]
     },
