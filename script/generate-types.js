@@ -18,10 +18,9 @@ config.nav.map((item) => {
 let installFunction = `
 export interface InstallationOptions {
   locale?: any;
-  lang?: any;
 }
 declare function install(app: App, options?: InstallationOptions): void;
-export { ${packages.join(',')},install };
+export { ${packages.join(',')},install,zh,en };
 declare const _default: {
   install: typeof install;
   version: string;
