@@ -17,6 +17,7 @@ const { create, componentName } = createComponent('empty');
 import TrendSvg from './trend.svg';
 import NodataSvg from './nodata.svg';
 import EmptySvg from './empty.svg';
+import { useLocaleInject } from '../../utils/useLocale';
 export default create({
   props: {
     mainTitle: {
@@ -33,7 +34,8 @@ export default create({
     }
   },
   setup(props) {
-    const emptyTitle = computed(() => props.mainTitle || 'emptyText');
+    const { t } = useLocaleInject();
+    const emptyTitle = computed(() => props.mainTitle || t('message.empty.mainTitle'));
     const comSvg = computed(() => {
       if (props.theme === 'trend') {
         return TrendSvg;

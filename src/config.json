@@ -32,9 +32,9 @@
         "show": true
       },
       {
-        "name": "international",
+        "name": "locale",
         "cName": "国际化",
-        "show": false
+        "show": true
       },
       {
         "name": "https://github.com/qqjay2017/minerui/releases",
@@ -144,6 +144,24 @@
           "show": true,
           "author": "huang"
         }
+      ]
+    },
+    {
+      "name": "配置组件",
+      "enName": "config",
+      "packages": [
+        {
+          "version": "3.0.0",
+          "name": "config",
+          "taro": false,
+          "type": "component",
+          "cName": "入口配置组件",
+          "desc": "入口配置组件",
+          "sort": 1,
+          "show": true,
+          "author": "huang"
+        }
+
       ]
     },
     {

@@ -2,7 +2,10 @@ const package = require('../package.json');
 const config = require('../src/config.json');
 const path = require('path');
 const fs = require('fs-extra');
-let importStr = `import { App } from 'vue';\n`;
+let importStr = `import { App } from 'vue';\n
+import { localeProviderMaker, LocaleInjectionKey } from './utils/useLocale';\n
+import zh from './utils/useLocale/zh';\n
+import en from './utils/useLocale/en';\n`;
 let importScssStr = `\n`;
 const packages = [];
 config.nav.map((item) => {
@@ -15,7 +18,7 @@ config.nav.map((item) => {
     }
   });
 });
-let installFunction = `function install(app: App) {
+let installFunction = `function install(app: App, options:any = {}) {
   const packages = [${packages.join(',')}];
   packages.forEach((item:any) => {
     if (item.install) {
@@ -24,6 +27,13 @@ let installFunction = `function install(app: App) {
       app.component(item.name, item);
     }
   });
+  if (options.locale) {
+    const localeProvides = localeProviderMaker(options.locale);
+    app.provide(LocaleInjectionKey, localeProvides);
+  }
+
+
+
 }`;
 let fileStrBuild = `${importStr}
 ${installFunction}
@@ -38,7 +48,7 @@ fs.outputFile(path.resolve(__dirname, '../src/packages/minerui.vue.build.ts'), f
 let fileStrDev = `${importStr}
 ${installFunction}
 ${importScssStr}
-export { install, ${packages.join(',')}  };
+export { install,zh,en, ${packages.join(',')}  };
 export default { install, version:'${package.version}'};`;
 fs.outputFile(path.resolve(__dirname, '../src/packages/minerui.vue.ts'), fileStrDev, 'utf8', (error) => {
   // logger.success(`${package_config_path} 文件写入成功`);
