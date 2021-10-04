@@ -35,9 +35,9 @@ app.use(Empty);
 
 ### 主图
 
-`theme`指定主图,内置三张svg,默认是`trend`,还支持`empty`和`nodata`
+提供`svg`插槽
 
-```vue demo src="./demo/theme.vue"
+```vue demo src="./demo/svg.vue"
 
 ```
 
@@ -49,4 +49,9 @@ app.use(Empty);
 :----:			|:---   |:---   |:---
 mainTitle			|上面的标题啊  | `string` | "No Data"
 subTitle			|下面的标题  | `string` | -
-theme			|指定主图  | `trend`,`empty`,`nodata` |'trend'
+
+## 插槽
+
+参数				|说明      
+:----:			|:---   
+svg			|主图插槽  |

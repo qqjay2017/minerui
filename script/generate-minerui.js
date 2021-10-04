@@ -38,7 +38,7 @@ let installFunction = `function install(app: App, options:any = {}) {
 let fileStrBuild = `${importStr}
 ${installFunction}
 const version = '${package.version}';
-export { install, version, ${packages.join(',')}};
+export { install, version, zh,en,${packages.join(',')}};
 export default { install, version};`;
 
 fs.outputFile(path.resolve(__dirname, '../src/packages/minerui.vue.build.ts'), fileStrBuild, 'utf8', (error) => {

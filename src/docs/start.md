@@ -52,6 +52,9 @@ export default {
 #### WebPack 构建工具 通过 babel 使用按需加载
 
 [babel-plugin-import](https://github.com/ant-design/babel-plugin-import) 是一款 babel 插件，它会在编译过程中将 import 语句自动转换为按需引入的方式。
+
+> babel配置import后将无法使用全局引入的方式
+
 ##### 安装插件
 ``` bash
 npm install babel-plugin-import --save-dev
