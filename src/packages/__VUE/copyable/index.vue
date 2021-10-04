@@ -26,9 +26,7 @@ export default create({
       type: String
     }
   },
-  emits: {
-    copy: (flag: boolean) => true
-  },
+  emits: ['copy'],
   setup(props, { emit }) {
     const handleCopy = () => {
       const flag = copy(props.copyText || props.showText);

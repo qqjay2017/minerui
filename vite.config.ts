@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
+import svgLoader from 'vite-svg-loader';
 import legacy from '@vitejs/plugin-legacy';
 import Markdown from 'vite-plugin-md';
 import path from 'path';
@@ -94,7 +95,8 @@ export default defineConfig({
     }),
     vue({
       include: [/\.vue$/, /\.md$/, ...vueDocFiles]
-    })
+    }),
+    svgLoader()
 
     // legacy({
     //   targets: ['defaults', 'not IE 11']

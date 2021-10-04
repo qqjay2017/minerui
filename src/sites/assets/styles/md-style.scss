@@ -44,7 +44,7 @@
     }
   }
 
-  h1 {
+  > h1 {
     margin: 0 0 30px;
     font-size: 30px;
     cursor: #1a1a1a;
@@ -63,12 +63,12 @@
     }
   }
 
-  h2 {
+  > h2 {
     margin: 45px 0 20px;
     font-size: 24px;
   }
 
-  h3 {
+  > h3 {
     margin: 16px 0px;
     font-weight: 600;
     font-size: 20px;

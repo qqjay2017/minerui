@@ -1,0 +1,3 @@
+<template>
+  <miner-empty />
+</template>

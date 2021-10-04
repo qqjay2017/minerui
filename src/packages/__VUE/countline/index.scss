@@ -1,0 +1,16 @@
+.miner-countline {
+  height: 6px;
+  display: flex;
+  &.is-reverse {
+    flex-direction: row-reverse;
+  }
+  &__item {
+    height: 100%;
+  }
+  &.is-round {
+    .miner-countline__item {
+      border-radius: 6px;
+      transform: scale(1.07, 1);
+    }
+  }
+}

@@ -1,7 +1,5 @@
 {
   "versions": [
-
-
   ],
   "header": [
     {
@@ -51,7 +49,6 @@
       "name": "基础组件",
       "enName": "base",
       "packages": [
-
         {
           "version": "3.0.0",
           "name": "Button",
@@ -108,8 +105,6 @@
           "desc": "svg在线图标",
           "author": "huang"
         },
-
-
         {
           "version": "3.0.0",
           "name": "OverLay",
@@ -123,12 +118,38 @@
         }
       ]
     },
-
+    {
+      "name": "展示组件",
+      "enName": "display",
+      "packages": [
+        {
+          "version": "3.0.0",
+          "name": "CountLine",
+          "taro": false,
+          "type": "component",
+          "cName": "数量条",
+          "desc": "数量条,用于展示占比情况",
+          "sort": 1,
+          "show": true,
+          "author": "huang"
+        },
+        {
+          "version": "3.0.0",
+          "name": "Empty",
+          "taro": false,
+          "type": "component",
+          "cName": "空内容",
+          "desc": "空内容,用于无数据时候的展示",
+          "sort": 2,
+          "show": true,
+          "author": "huang"
+        }
+      ]
+    },
     {
       "name": "操作反馈",
       "enName": "feedback",
       "packages": [
-
         {
           "version": "3.0.0",
           "name": "ActionSheet",
@@ -140,8 +161,6 @@
           "desc": "底部弹出动作菜单面板",
           "author": "zhangyufei"
         },
-
-
         {
           "version": "3.0.0",
           "name": "CollapseItem",
@@ -154,7 +173,6 @@
           "desc": "折叠面板-item",
           "author": "Ymm0008"
         },
-
         {
           "version": "3.0.0",
           "name": "Dialog",
@@ -191,7 +209,6 @@
           "show": true,
           "author": "wangyue217"
         },
-
         {
           "version": "3.0.0",
           "name": "PullRefresh",
@@ -225,7 +242,6 @@
           "desc": "弹出层容器，用于展示弹窗、信息提示等内容，支持多个弹出层叠加展示",
           "author": "szg2008"
         },
-
         {
           "version": "3.0.0",
           "name": "Swiper",
@@ -273,7 +289,6 @@
           "desc": "轻提示",
           "author": "undo"
         },
-
         {
           "version": "3.0.0",
           "name": "CircleProgress",
@@ -313,7 +328,6 @@
           "desc": "头部导航",
           "author": "liqiong43"
         },
-
         {
           "version": "3.0.0",
           "name": "Tab",
@@ -381,7 +395,6 @@
           "desc": "标签栏子组件",
           "author": "Drjingfubo"
         },
-
         {
           "version": "3.0.0",
           "name": "Pagination",
@@ -399,7 +412,6 @@
       "name": "数据录入",
       "enName": "dentry",
       "packages": [
-
         {
           "version": "3.0.0",
           "name": "Checkbox",
@@ -423,7 +435,6 @@
           "exportEmpty": true,
           "author": "Ymm0008"
         },
-
         {
           "version": "3.0.0",
           "name": "InputNumber",
@@ -469,7 +480,6 @@
           "show": false,
           "author": "Ymm0008"
         },
-
         {
           "version": "3.0.0",
           "name": "CalendarItem",
@@ -514,7 +524,6 @@
           "show": true,
           "author": "gx"
         },
-
         {
           "version": "3.0.0",
           "name": "NumberKeyboard",
@@ -548,7 +557,6 @@
           "taro": true,
           "author": "liqiong"
         },
-
         {
           "version": "3.0.0",
           "name": "Popover",
