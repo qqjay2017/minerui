@@ -580,12 +580,23 @@
         {
           "version": "3.0.0",
           "name": "CoinAvatar",
-          "taro": true,
+          "taro": false,
           "sort": 4,
           "cName": "币种头像",
           "type": "component",
           "show": true,
           "desc": "币种头像组件",
+          "author": "huang"
+        },
+        {
+          "version": "3.0.0",
+          "name": "CopyAble",
+          "taro": false,
+          "sort": 4,
+          "cName": "点击复制",
+          "type": "component",
+          "show": true,
+          "desc": "点击复制组件",
           "author": "huang"
         }
       ]
