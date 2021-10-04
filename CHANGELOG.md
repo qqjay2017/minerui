@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.0.7](https://github.com/qqjay2017/minerui/compare/v0.0.6...v0.0.7)
+`2021-10-04`
+
+
+### Features
+
+* empty组件取消预设主题,开放主图插槽 ([54b5321](https://github.com/qqjay2017/minerui/commit/54b5321b834e35f7ae2f842482d7755d0f312d6c))
+
 ## [0.0.6](https://github.com/qqjay2017/minerui/compare/v0.0.5...v0.0.6)
 `2021-10-04`
 
