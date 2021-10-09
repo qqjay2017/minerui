@@ -10,6 +10,7 @@
     width: 124px;
     line-height: 39px;
     text-align: center;
+    color: $pagination-disable-color;
   }
   &-prev,
   &-item,
@@ -21,10 +22,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: $white;
-    border-radius: $pagination-item-border-radius;
-    border: $pagination-item-border-width solid $pagination-item-border-color;
+    // background: $white;
+    // border-radius: $pagination-item-border-radius;
+    // border: $pagination-item-border-width solid $pagination-item-border-color;
     cursor: pointer;
+    user-select: none;
+  }
+  &-item {
+    color: $pagination-disable-color;
   }
   &-prev,
   &-item {
@@ -35,17 +40,17 @@
     padding: $pagination-prev-next-padding;
   }
   .simple-border {
-    border-right: $pagination-item-border-width solid
-      $pagination-item-border-color;
+    // border-right: $pagination-item-border-width solid
+    //   $pagination-item-border-color;
   }
   .active {
-    color: $white;
+    color: $primary-color;
     border: none;
-    background: $pagination-active-background-color;
+    // background: $pagination-active-background-color;
   }
   .disabled {
     color: $pagination-disable-color;
-    background-color: $pagination-disable-background-color;
+    // background-color: $pagination-disable-background-color;
     cursor: not-allowed;
   }
 }
